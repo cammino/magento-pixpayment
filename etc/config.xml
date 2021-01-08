@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Cammino_Pixpayment>
+            <version>0.0.1</version>
+            <depends>
+				<Mage_Payment />
+			</depends>
+        </Cammino_Pixpayment>
+    </modules>
+    <global>
+    	 <models>
+        	<pixpayment>
+        		<class>Cammino_Pixpayment_Model</class>
+        	</pixpayment>
+        </models>
+    	<helpers>
+            <pixpayment>
+                <class>Cammino_Pixpayment_Helper</class>
+            </pixpayment>
+        </helpers>
+       <blocks>
+       		<pixpayment>
+       			<class>Cammino_Pixpayment_Block</class>
+       		</pixpayment>
+       </blocks>
+    </global>
+	<frontend>
+		<routers>
+			<pixpayment>
+				<use>standard</use>
+				<args>
+					<module>Cammino_Pixpayment</module>
+					<frontName>pixpayment</frontName>
+				</args>
+			</pixpayment>
+		</routers>
+	</frontend>
+    <default>
+        <payment>
+            <pixpayment>
+                <active>1</active>
+                <model>Cammino_Pixpayment_Model_Default</model>
+                <order_status>processing</order_status>
+                <title>Pagamento PIX</title>
+            </pixpayment>
+         </payment>
+    </default>
+</config>

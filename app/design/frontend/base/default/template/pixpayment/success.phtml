@@ -1,0 +1,65 @@
+<?php
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magento.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magento.com for more information.
+ *
+ * @category    design
+ * @package     base_default
+ * @copyright   Copyright (c) 2006-2017 X.commerce, Inc. and affiliates (http://www.magento.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+?>
+
+<?php 
+    $orderId = $this->getOrderId(); 
+    $order = Mage::getModel('sales/order')->loadByIncrementId($orderId);
+?>
+
+<div class="receipt-content clearfix">    
+    <div class="receipt-box order-message">
+        <h1>Obrigado!</h1>
+        <h2 class="order-received">Recebemos o seu pedido.</h2>
+
+        <p class="message">Seu pedido foi registrado e um e-mail confirmando todos os detalhes foi enviado para você.</p>
+
+        <h3 class="order-number">Número do pedido</h3>
+        <p class="number"><?php echo $this->getOrderId(); ?></p>
+
+        <p class="message">Para completar o seu pedido, você deverá realizar o pagamento via PIX com o seguinte código:</p>
+
+        <!-- TODO - Código do PIX na tela, exibir o código -->
+        <div class="instructions">
+            <strong>Valor do pagamento:</strong> <?php echo $this->getOrderValue(); ?><br><br>
+            <?php echo $this->getInstructions(); ?>
+        </div>
+    </div>
+    
+    <div class="receipt-box order-infos">
+        <div class="receipt-wrapper box-1">
+            <h4>Acompanhe seu pedido</h4>
+            <p>Agora para acompanhar o andamento do pedido, basta acessar seu histórico de pedidos dentro da sua conta ou aguardar nossos emails de notificação que o sistema irá enviar automaticamente</p>
+            <a href="<?php echo $this->getUrl('sales/order/history/'); ?>">Consultar meus pedidos</a>
+        </div>
+        
+        <div class="receipt-wrapper box-2">
+            <h4>Prazo de entrega</h4>
+            <P>O prazo para entrega pode variar dependendo da disponibilidade dos itens do seu pedido, dessa forma, faremos as entregas parciais do que ja estiver em nosso estoque.</p>
+        </div>    
+
+    </div>
+</div>

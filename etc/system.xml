@@ -44,6 +44,18 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>0</show_in_store>
                         </code>
+                        <qrcode translate="label">
+                            <label>Código QR</label>
+                            <comment>Arquivos permitidos: jpg, jpeg, gif, png.</comment>
+                            <frontend_type>image</frontend_type>
+                            <backend_model>adminhtml/system_config_backend_image</backend_model>
+                            <upload_dir config="system/filesystem/media" scope_info="1">pix</upload_dir>
+                            <base_url type="media" scope_info="1">pix</base_url>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </qrcode>
                         <instructions translate="label">
                             <label>Instruções</label>
                             <frontend_type>textarea</frontend_type>

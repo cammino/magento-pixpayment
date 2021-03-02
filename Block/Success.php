@@ -7,7 +7,6 @@ class Cammino_Pixpayment_Block_Success extends Mage_Payment_Block_Form
 	private $_order;
 
 	public function _construct() {
-		Mage::log('teste block', null, 'system.log');
 		$this->_orderValue = Mage::registry("pixpayment_ordervalue");
 		$this->_orderId = Mage::registry("pixpayment_orderid");
 		$this->setTemplate("pixpayment/success.phtml");

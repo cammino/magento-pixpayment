@@ -5,7 +5,6 @@
 class Cammino_Pixpayment_DefaultController extends Mage_Core_Controller_Front_Action
 {
 	public function successAction(){
-		Mage::log('teste controller', null, 'system.log');
 		$order_id = Mage::getSingleton('checkout/session')->getLastRealOrderId(); 
         $order_details = Mage::getModel('sales/order')->loadByIncrementId($order_id);
 		$order_value = $order_details["base_grand_total"];

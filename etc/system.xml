@@ -28,6 +28,33 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
                         </ruleid>
+                        <promoruleid>
+                            <label>Id da Regra Para Promoções</label>
+                            <comment>Deixe vazio se não houver promoções ativas que troquem o valor do desconto dado por PIX.</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </promoruleid>
+                        <promocategoryids>
+                            <label>IDs das Categorias Em Promoção</label>
+                            <comment>Preencher separado por vírgula. Ex: 9,99,999  - Deixe vazio se não houver promoções ativas que troquem o valor do desconto dado por PIX.</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>40</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </promocategoryids>
+                        <promotext>
+                            <label>Texto de Aviso Para Promoção no Carrinho/Checkout</label>
+                            <comment>Texto exibido caso haja uma regra de promoção e o cliente possua produtos que participam da promoção junto com produtos que não participam.</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>50</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </promotext>
                     </fields>
                 </pixdiscount>
             </groups>

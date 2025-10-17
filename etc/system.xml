@@ -37,6 +37,15 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
                         </promoruleid>
+                        <promopct>
+                            <label>Porcentagem real de desconto da promoção</label>
+                            <comment>Em caso de promoções aonde também exista valor normal com desconto e o desconto do PIX é apenas adicional. Muda a exibição da porcentagem nas listagens e na página do produto.</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>35</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </promopct>
                         <promocategoryids>
                             <label>IDs das Categorias Em Promoção</label>
                             <comment>Preencher separado por vírgula. Ex: 9,99,999  - Deixe vazio se não houver promoções ativas que troquem o valor do desconto dado por PIX.</comment>
